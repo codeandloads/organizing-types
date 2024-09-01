@@ -1,6 +1,6 @@
 {
-  "name": "caltype",
-  "version": "1.0.0",
+  "name": "caltypes",
+  "version": "4.0.0",
   "description": "Shared type demo.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

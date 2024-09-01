@@ -1,5 +1,4 @@
-// import { User } from "codeandload";
-import { User } from "caltype";
+import { User } from "caltypes/index";
 
 const users: User[] = [
   { id: 1, name: "John Trivolta", email: "trivolta@gg.com", image: ".com" },

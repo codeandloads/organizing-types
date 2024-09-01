@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    // Enable constraints that allow a TypeScript project to be used with project references.
     "composite": true,
     "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "baseUrl": ".",
     "module": "ES2015",
     "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
     "skipLibCheck": true,
     "sourceMap": true,
-    "outDir": "./dist/",
+    "outDir": "./dist",
     "rootDir": "./src",
     "moduleResolution": "node",
     "removeComments": true,
@@ -25,8 +25,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "baseUrl": "."
+    "paths": {
+      "caltypes/*": ["../caltypes/src/*"] // Alias to your package
+    }
   },
   "exclude": ["node_modules"],
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts", "@types"],
+  "references": [
+    {
+      "path": "../caltypes"
+    }
+  ]
 }
